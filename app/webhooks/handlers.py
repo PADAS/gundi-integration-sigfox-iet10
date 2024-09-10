@@ -9,7 +9,7 @@ from .configurations import BinaryWebhookPayload, BinaryWebhookConfig
 logger = logging.getLogger(__name__)
 
 
-# @webhook_activity_logger()
+@webhook_activity_logger()
 async def webhook_handler(payload: BinaryWebhookPayload, integration=None, webhook_config: BinaryWebhookConfig = None):
     logger.info(f"Webhook handler executed with integration: '{integration}'.")
     logger.info(f"Payload: '{payload}'.")
